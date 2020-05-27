@@ -9,7 +9,7 @@ setup(name='csswansea_colab',
           'csswansea_colab', 
           'csswansea_colab.utils', 
           'csswansea_colab.java',
-          #'csswansea_colab.prolog',
+          'csswansea_colab.prolog',
       ], 
       install_requires=[],
       scripts=[]
