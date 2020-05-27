@@ -1436,7 +1436,7 @@ void SimTRAP(int trapNumber)
 void Initialize (bool& bError)
 {
     char ch;
-    trapFile.open("/usr/local/Pep8Term/trap");
+    trapFile.open("/content/pep8/trap");
     if (!trapFile.is_open()) {
         bError = true;
         cout << "Could not open trap file." << endl;
