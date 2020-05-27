@@ -22,10 +22,10 @@ def test(verbose=False):
     
   tmpdir = tempfile.mkdtemp()
   
-  with open(f'{tmpdir}/HelloWorld.txt', 'w') as f:
+  with open(f'{tmpdir}/HelloWorld.pl', 'w') as f:
     f.write("""hello :- format('Hello World.~n').\n""")
 
-  result = execute_command(f'swipl -q -l {tmpdir}/HelloWorld.txt -t hello.', verbose=verbose)
+  result = execute_command(f'swipl -q -l {tmpdir}/HelloWorld.pl -t hello.', verbose=verbose)
 
   if 'Hello World.' not in result:
     raise Exception('swi-prolog HelloWorld test did not produce the expected output...')
