@@ -13,7 +13,7 @@ def test():
         }
     """)
 
-  execute_command(f'javac {tmpdir}/HelloWorld.java -o {tmpdir}', verbose=True)
+  execute_command(f'javac {tmpdir}/HelloWorld.java -d {tmpdir}', verbose=True)
   execute_command(f'java  {tmpdir}/HelloWorld', verbose=True)
 
   shutil.rmtree(tmpdir)
