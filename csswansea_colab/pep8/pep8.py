@@ -48,7 +48,7 @@ main:    STRO msg, d
 .END """)
 
   execute_command(f'asem8 {tmpdir}/HelloWorld.pep', verbose=verbose)
-  execute_interactive_command(f'pep8', ['l', f'{tmpdir}/HelloWorld', 'x', 'o', 'f', f'{tmpdir}/HelloWorld.out', 'x', 'q'], verbose=False)
+  execute_interactive_command(f'pep8', ['l', f'{tmpdir}/HelloWorld', 'o', 'f', f'{tmpdir}/HelloWorld.out', 'x', 'q'], verbose=False)
 
   with open(f'{tmpdir}/HelloWorld.out', 'r') as f:
     result = f.read()
