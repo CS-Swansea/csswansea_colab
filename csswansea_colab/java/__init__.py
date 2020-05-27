@@ -1,7 +1,7 @@
 import os, tempfile, shutil
 from csswansea_colab.utils import execute_command
 
-def test():
+def test(verbose=False):
   tmpdir = tempfile.mkdtemp()
   
   with open(f'{tmpdir}/HelloWorld.java', 'w') as f:
@@ -13,7 +13,10 @@ def test():
         }
     """)
 
-  execute_command(f'javac {tmpdir}/HelloWorld.java -d {tmpdir}', verbose=True)
-  execute_command(f'java  {tmpdir}/HelloWorld', verbose=True)
+  execute_command(f'javac {tmpdir}/HelloWorld.java -d {tmpdir}', verbose=verbose)
+  result = execute_command(f'java -cp {tmpdir} HelloWorld',      verbose=verbose)
+
+  if 'Hello World.' not in result:
+    raise Exception('java HelloWorld test did not produce the expected output...')
 
   shutil.rmtree(tmpdir)
