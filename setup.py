@@ -11,6 +11,7 @@ setup(name='csswansea_colab',
           'csswansea_colab.java',
           'csswansea_colab.prolog',
           'csswansea_colab.haskell',
+          'csswansea_colab.pep8',
       ], 
       install_requires=[],
       scripts=[]
