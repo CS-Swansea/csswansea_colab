@@ -1,6 +1,6 @@
 def configure(verbose=False):
   import os
-  from csswansea.utils import execute_command
+  from csswansea_colab.utils import execute_command
   
   print()
   print('installing java')
