@@ -1,6 +1,10 @@
+import os
+import csswansea_colab
+from csswansea_colab.utils import execute_command
+
+test = csswansea_colab.java.test
+
 def configure(verbose=False):
-  import os
-  from csswansea_colab.utils import execute_command
 
   print()
   print('installing java')

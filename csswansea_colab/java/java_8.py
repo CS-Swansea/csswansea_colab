@@ -1,7 +1,10 @@
-def configure(verbose=False):
-  import os
-  from csswansea_colab.utils import execute_command
+import os
+import csswansea_colab
+from csswansea_colab.utils import execute_command
+
+test = csswansea_colab.java.test
   
+def configure(verbose=False):
   print()
   print('installing java')
   install_output = execute_command(f'apt-get install -y openjdk-8-jdk-headless')
