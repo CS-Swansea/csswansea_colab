@@ -4,7 +4,12 @@ def execute_command(cmd, verbose=False):
 
   if verbose:
   	print('++', cmd)
-  	
+
   prc       = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
   stdout, _ = prc.communicate()
-  return stdout.decode('ascii')
+  stdout    = stdout.decode('ascii')
+
+  if verbose:
+    print(stdout)  
+
+  return stdout
