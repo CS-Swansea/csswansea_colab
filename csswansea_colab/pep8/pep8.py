@@ -53,6 +53,9 @@ main:    STRO msg, d
   with open(f'{tmpdir}/HelloWorld.out', 'r') as f:
     result = f.read()
 
+    if verbose:
+      print(result)
+
   if 'Hello World.' not in result:
     raise Exception('pep8 HelloWorld test did not produce the expected output...')
   else:
