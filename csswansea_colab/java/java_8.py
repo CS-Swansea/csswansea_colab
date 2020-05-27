@@ -22,9 +22,9 @@ def configure(verbose=False, execute_tests=True):
   
   print()
   print('java version')
-  execute_command(f'java -version', verbose=verbose)
+  execute_command(f'java -version', verbose=True)
   print('javac version')
-  execute_command(f'javac -version', verbose=verbose)
+  execute_command(f'javac -version', verbose=True)
 
   if execute_tests:
     test(verbose=verbose)
