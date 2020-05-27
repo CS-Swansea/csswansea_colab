@@ -5,7 +5,11 @@ setup(name='csswansea_colab',
       description='Resources for Configuring Programming Environments in Google Colab',
       author='Dr Joss Whittle',
       author_email='j.o.whittle@swansea.ac.uk',
-      packages=['csswansea_colab'], 
+      packages=[
+          'csswansea_colab', 
+          'csswansea_colab.utils', 
+          'csswansea_colab.java'
+      ], 
       install_requires=[],
       scripts=[]
 )
