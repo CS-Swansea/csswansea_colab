@@ -1,6 +1,10 @@
 
-def execute_command(cmd):
+def execute_command(cmd, verbose=False):
   import re, subprocess
+
+  if verbose:
+  	print('++', cmd)
+  	
   prc       = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
   stdout, _ = prc.communicate()
-  return re.sub(r'\W*\n+', '\n', stdout.decode('ascii')).strip('\n')
+  return stdout.decode('ascii')
