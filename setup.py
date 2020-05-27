@@ -14,5 +14,6 @@ setup(name='csswansea_colab',
           'csswansea_colab.pep8',
       ], 
       install_requires=[],
-      scripts=[]
+      scripts=[],
+      include_package_data=True,
 )
