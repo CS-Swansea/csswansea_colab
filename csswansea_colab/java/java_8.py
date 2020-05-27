@@ -4,7 +4,7 @@ from csswansea_colab.utils import execute_command
 
 test = csswansea_colab.java.test
   
-def configure(verbose=False):
+def configure(verbose=False, execute_tests=True):
   print()
   print('installing java')
   execute_command(f'apt-get install -y openjdk-8-jdk-headless', verbose=verbose)
@@ -25,3 +25,6 @@ def configure(verbose=False):
   execute_command(f'java -version', verbose=verbose)
   print('javac version')
   execute_command(f'javac -version', verbose=verbose)
+
+  if execute_tests:
+    test()
