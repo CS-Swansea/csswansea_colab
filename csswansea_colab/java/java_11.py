@@ -28,4 +28,4 @@ def configure(verbose=False, execute_tests=True):
   execute_command(f'javac -version', verbose=verbose)
 
   if execute_tests:
-    test()
+    test(verbose=verbose)

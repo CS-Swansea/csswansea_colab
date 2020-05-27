@@ -2,6 +2,9 @@ import os, tempfile, shutil
 from csswansea_colab.utils import execute_command
 
 def test(verbose=False):
+  print()
+  print('executing tests')
+    
   tmpdir = tempfile.mkdtemp()
   
   with open(f'{tmpdir}/HelloWorld.java', 'w') as f:
@@ -18,5 +21,7 @@ def test(verbose=False):
 
   if 'Hello World.' not in result:
     raise Exception('java HelloWorld test did not produce the expected output...')
+  else:
+    print('Tests passed.')
 
   shutil.rmtree(tmpdir)
