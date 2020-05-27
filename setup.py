@@ -6,6 +6,6 @@ setup(name='csswansea_colab',
       author='Dr Joss Whittle',
       author_email='j.o.whittle@swansea.ac.uk',
       packages=['csswansea_colab'], 
-      install_requires=['os', 're', 'subprocess'],
+      install_requires=[],
       scripts=[]
 )
