@@ -19,7 +19,8 @@ def execute_interactive_command(cmd, icmds, verbose=False):
   prc = subprocess.Popen(cmd.split(), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
   
   for icmd in icmds:
-    print(f'++ {icmd.strip()}')
+    if verbose:
+      print(f'++ {icmd.strip()}')
     
     prc.stdin.write(f'{icmd.strip()}\n'.encode('ascii'))
     prc.stdin.flush()
