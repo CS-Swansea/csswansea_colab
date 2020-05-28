@@ -13,3 +13,7 @@ Resources for Configuring Programming Environments in Google Colab
 4. Create a duplicate of the example stored on your Google Drive.
 
 ![Copy the example to your Google Drive.](examples/colab-copy.png)
+
+5. Rename it something more relevant.
+
+![Rename the notebook.](examples/colab-rename.png)
